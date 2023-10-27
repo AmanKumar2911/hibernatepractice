@@ -1,5 +1,8 @@
 package com.example;
 
+
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Transient;
@@ -11,6 +14,8 @@ public class emptable {
     private int id;
     private String name;
     private String city;
+
+    private Certificate certi;
 
     public emptable(int id, String name, String city) {
         this.id = id;
@@ -46,9 +51,16 @@ public class emptable {
         this.city = city;
     }
 
-    @Override
-    public String toString() {
-        return "emp [id=" + id + ", name=" + name + ", city=" + city + "]";
+    public Certificate getcerti(){
+        return certi;
     }
+
+    public void setcerti(Certificate certi){
+        this.certi = certi;
+    }
+
+    
+
+
 
 }
